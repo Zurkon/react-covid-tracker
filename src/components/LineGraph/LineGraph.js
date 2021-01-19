@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { Container, Paper } from '@material-ui/core';
+
 import { Line } from 'react-chartjs-2';
 
 import { buildChartData } from '../../helpers/utils';
@@ -62,7 +64,7 @@ const LineGraph = ({ casesType }) => {
   }, [casesType])
 
   return (
-    <div className={classes.root}>
+    <Container className={classes.root} component={Paper}>
       {data.length > 0 && (
         <Line
           data={{
@@ -77,7 +79,7 @@ const LineGraph = ({ casesType }) => {
           options={options}
         />
       )}
-    </div>
+    </Container>
   );
 }
 

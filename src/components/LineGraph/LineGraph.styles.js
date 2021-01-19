@@ -2,8 +2,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   root: {
-    height: '360px',
-    marginTop: '20px'
+    height: '400px',
+    marginTop: '20px',
+    padding: '20px 10px',
+    backgroundColor: '#fff'
   }
 });
 
