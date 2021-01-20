@@ -21,6 +21,7 @@ function App() {
   const [tableData, setTableData] = useState([]);
   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
   const [mapZoom, setMapZoom] = useState(2);
+  const [casesType, setCasesType] = useState('cases');
 
   // Change light or dark mode depending on user's browser preferences
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -95,16 +96,16 @@ function App() {
             setMapCenter={setMapCenter}
             setMapZoom={setMapZoom}
           />
-          <StatsBar countryInfo={countryInfo} />
+          <StatsBar countryInfo={countryInfo} setCasesType={setCasesType} />
           <MapContainer
             center={mapCenter}
             zoom={mapZoom}
             countries={countries}
-            casesType={"cases"}
+            casesType={casesType}
           />
         </div>
         <div className="app__aside">
-          <Aside data={tableData} darkMode={prefersDarkMode} />
+          <Aside data={tableData} darkMode={prefersDarkMode} casesType={casesType} />
         </div>
       </div>
     </ThemeProvider>

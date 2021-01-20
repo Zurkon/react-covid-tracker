@@ -4,11 +4,11 @@ import { Card, CardContent, Typography } from '@material-ui/core';
 
 import useStyles from './InfoBox.styles';
 
-const InfoBox = ({ title, cases, total }) => {
+const InfoBox = ({ title, cases, total, onClick }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.infoBox}>
+    <Card onClick={onClick} className={classes.infoBox}>
       <CardContent>
         <Typography color="textSecondary">
           {title}

@@ -6,6 +6,7 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import { Paper } from '@material-ui/core';
+import numeral from 'numeral';
 
 import useStyles from './CasesTable.styles';
 
@@ -20,7 +21,7 @@ const CasesTable = ({ countries }) => {
             countries.map(({ name, cases }, index) => (
               <TableRow key={name}>
                 <TableCell component="th" scope="row"> <span>{index + 1}</span> {name}</TableCell>
-                <TableCell align="right"> <strong>{cases}</strong> </TableCell>
+                <TableCell align="right"> <strong>{numeral(cases).format('0,0')}</strong> </TableCell>
               </TableRow>
             ))
           }

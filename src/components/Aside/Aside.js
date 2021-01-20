@@ -7,7 +7,7 @@ import LineGraph from '../LineGraph/LineGraph';
 
 import useStyles from './Aside.styles';
 
-const Aside = ({ data, darkMode }) => {
+const Aside = ({ data, darkMode, casesType }) => {
   const classes = useStyles(darkMode);
 
   return (
@@ -18,9 +18,9 @@ const Aside = ({ data, darkMode }) => {
         </Typography>
         <CasesTable countries={data} />
         <Typography variant="h6">
-          Worldwide new cases
+          Worldwide new {casesType}
         </Typography>
-        <LineGraph />
+        <LineGraph casesType={casesType} />
       </CardContent>
     </Card>
   )

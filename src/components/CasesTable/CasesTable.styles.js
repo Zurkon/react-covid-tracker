@@ -5,7 +5,7 @@ const useStyles = makeStyles({
     marginTop: '20px',
     marginBottom: '20px',
     overflowY: 'scroll',
-    height: '400px',
+    height: '320px',
     '& span': {
       paddingRight: '12px'
     }

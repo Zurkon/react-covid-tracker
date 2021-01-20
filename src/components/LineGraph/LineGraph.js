@@ -4,7 +4,7 @@ import { Container, Paper } from '@material-ui/core';
 
 import { Line } from 'react-chartjs-2';
 
-import { buildChartData } from '../../helpers/utils';
+import { buildChartData, casesTypeColors } from '../../helpers/utils';
 
 import useStyles from './LineGraph.styles';
 
@@ -70,8 +70,8 @@ const LineGraph = ({ casesType }) => {
           data={{
             datasets: [
               {
-                backgroundColor: 'rgba(204,16, 52, 0.5)',
-                borderColor: '#CC1034',
+                backgroundColor: casesTypeColors[casesType].half_op,
+                borderColor: casesTypeColors[casesType].hex,
                 data: data
               }
             ]

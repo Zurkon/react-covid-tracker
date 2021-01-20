@@ -5,7 +5,7 @@ const useStyles = makeStyles({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: '20px'
+    marginBottom: '2rem'
   },
   dropdown: {
     minWidth: '120px'
