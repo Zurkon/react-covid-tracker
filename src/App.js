@@ -7,7 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Header from './components/Header/Header';
 import StatsBar from './components/StatsBar/StatsBar';
-import Map from './components/Map/Map';
+import MapContainer from './components/MapContainer/MapContainer';
 import Aside from './components/Aside/Aside';
 
 import { sortData } from './helpers/utils';
@@ -19,6 +19,8 @@ function App() {
   const [country, setCountry] = useState('worldwide');
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
+  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapZoom, setMapZoom] = useState(2);
 
   // Change light or dark mode depending on user's browser preferences
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
@@ -55,12 +57,22 @@ function App() {
               id: country.countryInfo._id,
               name: country.country,
               value: country.countryInfo.iso2,
+              flag: country.countryInfo.flag,
+              latitude: country.countryInfo.lat,
+              longitude: country.countryInfo.long,
+              cases: country.cases,
+              recovered: country.recovered,
+              deaths: country.deaths,
+              todayCases: country.todayCases,
+              todayRecovered: country.todayRecovered,
+              todayDeaths: country.todayDeaths,
             }
           )).filter(country => country.id != null)
 
-          console.log(data);
+          // console.log(data);
+          // console.log(countries);
 
-          const sortedData = sortData(data);
+          const sortedData = sortData(countries);
 
           setTableData(sortedData);
           setCountries(countries);
@@ -68,16 +80,28 @@ function App() {
     }
 
     getCountriesDate();
-  }, [])
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="app">
         <div className="app__main">
-          <Header countries={countries} country={country} setCountry={setCountry} setCountryInfo={setCountryInfo} />
+          <Header
+            countries={countries}
+            country={country}
+            setCountry={setCountry}
+            setCountryInfo={setCountryInfo}
+            setMapCenter={setMapCenter}
+            setMapZoom={setMapZoom}
+          />
           <StatsBar countryInfo={countryInfo} />
-          <Map />
+          <MapContainer
+            center={mapCenter}
+            zoom={mapZoom}
+            countries={countries}
+            casesType={"cases"}
+          />
         </div>
         <div className="app__aside">
           <Aside data={tableData} darkMode={prefersDarkMode} />

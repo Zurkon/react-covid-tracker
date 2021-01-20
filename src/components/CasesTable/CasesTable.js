@@ -17,9 +17,9 @@ const CasesTable = ({ countries }) => {
       <Table aria-label="Live Cases Table">
         <TableBody>
           {
-            countries.map(({ country, cases }, index) => (
-              <TableRow key={country}>
-                <TableCell component="th" scope="row"> <span>{index + 1}</span> {country}</TableCell>
+            countries.map(({ name, cases }, index) => (
+              <TableRow key={name}>
+                <TableCell component="th" scope="row"> <span>{index + 1}</span> {name}</TableCell>
                 <TableCell align="right"> <strong>{cases}</strong> </TableCell>
               </TableRow>
             ))

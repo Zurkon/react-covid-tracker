@@ -4,20 +4,21 @@ import { MenuItem, Select, FormControl, InputLabel } from '@material-ui/core';
 
 import useStyles from './Header.styles';
 
-const Header = ({ countries, country, setCountry, setCountryInfo }) => {
+const Header = ({ countries, country, setCountry, setCountryInfo, setMapCenter, setMapZoom }) => {
   const classes = useStyles();
 
   const handleChange = async (event) => {
     const countryCode = event.target.value;
 
-    const url = countryCode === 'worldwide' ? 'https://disease.sh/v3/covid-19/all' : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
-
-    await fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        setCountry(countryCode);
-        setCountryInfo(data);
-      })
+    if (countryCode === 'worldwide') {
+      setCountryInfo(countries);
+    } else {
+      const selectedCountry = countries.filter(country => country.value === countryCode);
+      setCountryInfo(selectedCountry[0]);
+      setMapCenter([selectedCountry[0].latitude, selectedCountry[0].longitude]);
+      setMapZoom(4);
+    }
+    setCountry(countryCode);
   }
 
   return (

@@ -13,7 +13,7 @@ const InfoBox = ({ title, cases, total }) => {
         <Typography color="textSecondary">
           {title}
         </Typography>
-        <h1>
+        <h1 className={classes.info, title === 'Recovered' ? classes.recovered : title === "Deaths" ? classes.deaths : classes.cases} >
           {cases}
         </h1>
         <Typography color="textSecondary">
