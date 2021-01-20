@@ -1,3 +1,27 @@
+<h1 align="center">React COVID Tracker</h1> 
+
+<div align="center">
+
+  <img width="400" src="https://raw.githubusercontent.com/Zurkon/RepoAssets/main/react-covid-tracker/tracker.png" />
+
+A dashboard tracking covid-19 data powered by [disease.sh](https://disease.sh/) and made with [`React`](https://facebook.github.io/react/).
+
+</div>
+
+## Libraries
+
+This project was made using:
+
+- [`React`](https://facebook.github.io/react/) - Library for building user interfaces.
+- [`Material-UI`](https://github.com/mui-org/material-ui) - Reusable components made with Material Design.
+- [`numeral.js`](https://github.com/adamwdraper/Numeral-js) - A javascript library for formatting and manipulating numbers.
+- [`leaflet`](https://github.com/Leaflet/Leaflet) - A javaScript library for mobile-friendly interactive maps.
+- [`react-leaflet`](https://github.com/PaulLeCam/react-leaflet) - React components for Leaflet maps.
+- [`chart.js`](https://github.com/chartjs/Chart.js) - Simple HTML5 Charts using the `<canvas>` tag
+- [`react-chartjs-2`](https://github.com/reactchartjs/react-chartjs-2) - React wrapper for chart.js
+
+Data from [disease.sh](https://disease.sh/) API.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
