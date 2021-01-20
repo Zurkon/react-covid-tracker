@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img width="400" src="https://raw.githubusercontent.com/Zurkon/RepoAssets/main/react-covid-tracker/tracker.png" />
+  <img width="500" src="https://raw.githubusercontent.com/Zurkon/RepoAssets/main/react-covid-tracker/tracker.png" />
 
 A dashboard tracking covid-19 data powered by [disease.sh](https://disease.sh/) and made with [`React`](https://facebook.github.io/react/).
 
