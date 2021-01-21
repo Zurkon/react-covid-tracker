@@ -19,6 +19,7 @@ This project was made using:
 - [`react-leaflet`](https://github.com/PaulLeCam/react-leaflet) - React components for Leaflet maps.
 - [`chart.js`](https://github.com/chartjs/Chart.js) - Simple HTML5 Charts using the `<canvas>` tag
 - [`react-chartjs-2`](https://github.com/reactchartjs/react-chartjs-2) - React wrapper for chart.js
+- [`simplebar-react`](https://github.com/Grsmto/simplebar/tree/master/packages/simplebar-react) - React wrapper of [`simplebar`](https://github.com/Grsmto/simplebar) a custom scrollbars vanilla javascript library with native scroll, done simple, lightweight, easy to use and cross-browser. 
 
 Data from [disease.sh](https://disease.sh/) API.
 

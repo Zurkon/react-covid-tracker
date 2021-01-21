@@ -1,11 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
+  root: {
+    marginTop: '10px',
+    marginBottom: '10px',
+  },
   table: {
-    marginTop: '20px',
-    marginBottom: '20px',
-    overflowY: 'scroll',
+    // overflowY: 'scroll',
+    // overflow: 'hidden',
     height: '320px',
+    paddingRight: '11px',
     '& span': {
       paddingRight: '12px'
     }

@@ -6,7 +6,7 @@ const useStyles = makeStyles({
     backgroundColor: '#777',
     padding: '1rem',
     borderRadius: '5px',
-    marginTop: '2rem',
+    marginTop: '2.5rem',
     marginBottom: '1rem',
     boxShadow: '0 0 8px -4px rgba(0, 0, 0, 0.5)',
     "& #mapContainer": {
